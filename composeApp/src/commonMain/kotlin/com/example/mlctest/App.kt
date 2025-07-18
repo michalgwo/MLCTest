@@ -1,0 +1,43 @@
+package com.example.mlctest
+
+import androidx.compose.foundation.layout.Box
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import dev.sargunv.maplibrecompose.compose.MaplibreMap
+import dev.sargunv.maplibrecompose.compose.layer.LineLayer
+import dev.sargunv.maplibrecompose.compose.rememberCameraState
+import dev.sargunv.maplibrecompose.compose.rememberStyleState
+import dev.sargunv.maplibrecompose.compose.source.rememberGeoJsonSource
+import dev.sargunv.maplibrecompose.core.BaseStyle
+import dev.sargunv.maplibrecompose.core.source.GeoJsonData
+import org.jetbrains.compose.ui.tooling.preview.Preview
+
+@Composable
+@Preview
+fun App() {
+    MaterialTheme {
+        val cameraState = rememberCameraState()
+        val styleState = rememberStyleState()
+        Box {
+            MaplibreMap(
+                cameraState = cameraState,
+                styleState = styleState,
+                baseStyle = BaseStyle.Uri("https://api.protomaps.com/styles/v5/light/en.json?key=73c45a97eddd43fb"),
+            ) {
+                LineLayer(
+                    id = "asdf",
+                    source = rememberGeoJsonSource(
+                        GeoJsonData.Uri("https://raw.githubusercontent.com/datanews/amtrak-geojson/refs/heads/master/amtrak-combined.geojson")
+                    )
+                )
+            }
+            Text(
+                modifier = Modifier.align(Alignment.TopStart),
+                text = cameraState.position.zoom.toString()
+            )
+        }
+    }
+}
