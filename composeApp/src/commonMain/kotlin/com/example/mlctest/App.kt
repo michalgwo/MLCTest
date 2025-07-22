@@ -53,14 +53,6 @@ fun App() {
 //                modifier = Modifier.align(Alignment.TopStart),
 //                text = cameraState.position.zoom.toString()
 //            )
-            Button(
-                modifier = Modifier.align(Alignment.BottomEnd).padding(bottom = 40.dp),
-                onClick = {
-                    viewModel.toggleRandomVariable()
-                }
-            ) {
-                Text(text = "Toggle random variable")
-            }
         }
     }
 }
