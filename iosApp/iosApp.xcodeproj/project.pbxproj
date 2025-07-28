@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		AFFA1C302E2BD6960068FE5C /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = AFFA1C2F2E2BD6960068FE5C /* MapLibre */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		B9DA97B12DC1472C00A4DA20 /* MLCTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLCTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -45,7 +41,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFFA1C302E2BD6960068FE5C /* MapLibre in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +85,6 @@
 			);
 			name = iosApp;
 			packageProductDependencies = (
-				AFFA1C2F2E2BD6960068FE5C /* MapLibre */,
 			);
 			productName = iosApp;
 			productReference = B9DA97B12DC1472C00A4DA20 /* MLCTest.app */;
@@ -121,7 +115,6 @@
 			mainGroup = B9DA97A82DC1472C00A4DA20;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				AFFA1C2E2E2BD6960068FE5C /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B9DA97B22DC1472C00A4DA20 /* Products */;
@@ -383,25 +376,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		AFFA1C2E2E2BD6960068FE5C /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.17.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AFFA1C2F2E2BD6960068FE5C /* MapLibre */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AFFA1C2E2E2BD6960068FE5C /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;
-			productName = MapLibre;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9DA97A92DC1472C00A4DA20 /* Project object */;
 }
